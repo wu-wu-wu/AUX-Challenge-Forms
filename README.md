@@ -9,6 +9,7 @@
 **Modernizr**: http://modernizr.com/
 
 **jQuery validation**: http://bassistance.de/jquery-plugins/jquery-plugin-validation/
+**Parsley**: http://parsleyjs.org
 
 # Guidelines
 - Fork or clone the GIT rep
