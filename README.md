@@ -33,4 +33,4 @@
 - https://developer.mozilla.org/en-US/docs/Web/Accessibility
 - https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms
 - https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/How_to_build_custom_form_widgets
-- http://www.webstandards.org/learn/tutorials/accessible-forms/beginner/
+- http://www.webstandards.org/learn/tutorials/accessible-forms/beginner/# TaughtByWomen
