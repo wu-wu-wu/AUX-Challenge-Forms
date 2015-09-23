@@ -2,15 +2,131 @@
 <html lang="en" class="no-js">
 <head>
   <title></title>
-  
+
   <link rel="dns-prefetch" href="//ajax.googleapis.com">
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
-  
+
   <meta charset="UTF-8">
   <meta http-equiv="cleartype" content="on">
 
 </head>
 <body>
+  <form>
+    <h1>Sign up for Whoo!</h1>
+    <p>50 projects, 500 images, 10 videos, domain binding, and technical support</p>
 
+    <section>
+      <h1><span class="number">1</span> First, name your portfolio</h1>
+      <fieldset>
+        <!--legend><span class="number">1</span> First, name your portfolio</legend-->
+        <p>
+          <label for="name">
+            <span>Portfolio Name </span>
+            <input type="text" id="name" name="portfolioname" required />
+            <!--strong><abbr title="required">*</abbr></strong-->
+          </label>
+        </p>
+        <p>
+         <label for="text">
+           <span>Porfolio Address </span>
+           <input type="address" id="address" name="portfolioaddress" required />
+           <!--strong><abbr title="required">*</abbr></strong-->
+         </label>
+       </p>
+      </fieldset>
+    </section>
+
+    <section>
+      <h1><span class="number">2</span> Now, enter your account details</h1>
+      <fieldset>
+      <p>
+        <input name="nameinput" type="text" id"usernameinput" maxlength="40" data-validate="notBlank signUpName" aria-required="true" title="Enter your full name" data-errormsg-notblank="Please enter your full name" data-errormsg-fullname="First and Last names can only contain letters, hyphen, apostrophy and spaces." aria-describedby="some-voice" aria-invalid="true" class="errorField">
+
+      </p>
+      </fieldset>
+    </section>
+
+    <section>
+      <h1><span class="number">3</span> Finally, enter your payment information</h1>
+      <fieldset>
+      <p>
+        <label for="card-">
+          <span>Card type:</span>
+          <select id="card" name="usercard">
+            <option value="visa">Visa</option>
+            <option value="mc">Mastercard</option>
+            <option value="amex">American Express</option>
+          </select>
+        </label>
+      </p>
+      <p>
+        <label for="security-code">
+          <span>Security code:</span>
+          <input type="text" id="number" name="cardnumber" required />
+          <strong><abbr title="required">*</abbr></strong>
+        </label>
+      </p>
+      <p>
+        <label for="expirationMonth" class="hiddentext">Expiration date month</label>
+        <select name="expirationmonth" data-validate="months" aria-required="true" data-error-msg-months="please select the expiration month of your card" aria-describedby="expirationMonthFeedbackmsg">
+          <option value="00">Month</option>
+          <option value="01">January</option>
+          <option value="02">February</option>
+          <option value="03">March</option>
+          <option value="04">April</option>
+          <option value="05">May</option>
+          <option value="06">June</option>
+          <option value="07">July</option>
+          <option value="08">August</option>
+          <option value="09">September</option>
+          <option value="10">October</option>
+          <option value="11">November</option>
+          <option value="12">December</option>
+        </select>
+        <select name="expirationday" data-validate="days" title="select expiration day of your card" aria-required="true" data-error-msg-months="please select the expiration month of your card" aria-describedby="expirationMonthFeedbackmsg">
+          <option value="00">Day</option>
+          <option value="01">1</option>
+          <option value="02">2</option>
+          <option value="03">3</option>
+          <option value="04">4</option>
+          <option value="05">5</option>
+          <option value="06">6</option>
+          <option value="07">7</option>
+          <option value="08">8</option>
+          <option value="09">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+          <option value="26">26</option>
+          <option value="27">27</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30">30</option>
+          <option value="31">31</option>
+        </select>
+      </p>
+    </fieldset>
+    </section>
+
+    <section>
+      <p>
+        <button>Create your portfolio</button>
+      </p>
+    </section>
+
+  </form>
 </body>
 </html>
