@@ -24,13 +24,23 @@
 - Use semantic HTML
 
 # Resources
-- https://www.google.com/search?q=site:w3.org+forms&search-submit=&gws_rd=ssl
+**Forms Accessibility**
+- https://www.google.com/search?q=site:w3.org+forms&search-submit=&gws_rd=ssl 
+- http://www.w3.org/WAI/tutorials/forms/ ✓
 - http://www.w3.org/TR/html401/interact/forms.html
-- http://www.w3.org/WAI/tutorials/forms/
-- https://css-tricks.com/css-sprites/
-- http://www.spritecow.com/
+- http://www.webstandards.org/learn/tutorials/accessible-forms/beginner/# 
 - https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/How_to_structure_an_HTML_form
-- https://developer.mozilla.org/en-US/docs/Web/Accessibility
 - https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms
 - https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/How_to_build_custom_form_widgets
-- http://www.webstandards.org/learn/tutorials/accessible-forms/beginner/# 
+**General Accessibility**
+- https://developer.mozilla.org/en-US/docs/Web/Accessibility
+- A Web for Everyone - Sarah Horton and Whitney Quesenbery
+**Naming Conventions**
+http://www.bbc.co.uk/ontologies
+http://schema.org/docs/schemas.html
+http://dublincore.org/documents/usageguide/elements.shtml
+**CSS Sprites**
+- https://css-tricks.com/css-sprites/
+- http://www.spritecow.com/
+**Credit Card Validator**
+http://jquerycreditcardvalidator.com/
