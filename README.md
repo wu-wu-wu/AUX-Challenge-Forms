@@ -48,3 +48,5 @@
 
 **Credit Card Validator**
 - http://jquerycreditcardvalidator.com/
+- http://www.the-art-of-web.com/javascript/validate/3/
+
