@@ -32,15 +32,19 @@
 - https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/How_to_structure_an_HTML_form
 - https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms
 - https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/How_to_build_custom_form_widgets
+
 **General Accessibility**
 - https://developer.mozilla.org/en-US/docs/Web/Accessibility
 - A Web for Everyone - Sarah Horton and Whitney Quesenbery
+
 **Naming Conventions**
-http://www.bbc.co.uk/ontologies
-http://schema.org/docs/schemas.html
-http://dublincore.org/documents/usageguide/elements.shtml
+- http://www.bbc.co.uk/ontologies
+- http://schema.org/docs/schemas.html
+- http://dublincore.org/documents/usageguide/elements.shtml
+
 **CSS Sprites**
 - https://css-tricks.com/css-sprites/
 - http://www.spritecow.com/
+
 **Credit Card Validator**
-http://jquerycreditcardvalidator.com/
+- http://jquerycreditcardvalidator.com/
