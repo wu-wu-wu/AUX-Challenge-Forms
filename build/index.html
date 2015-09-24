@@ -17,18 +17,20 @@
     <h2>50 Projects, 500 images, 10 videos, domain binding, and technical support</h2>
   </header>
 
+<!-- look up! aria-invalid="true" aria-describedby="some-voice" data-error-msg-months="please select the expiration month of your card" aria-describedby="expirationMonthFeedbackmsg"-->
+
 <form>
     <section>
       <!--image "1"-->
       <h1>First, name your portfolio</h1>
       <fieldset>
         <!--legend><span class="number">1</span> First, name your portfolio</legend-->
-        <label for="name">Portfolio name</label>
-        <input type="text" id="portfolio name" name="portfolioname" aria-required="true" />
+        <label for="portfolioname">Portfolio name</label>
+        <input type="text" id="portfolioname" name="portfolioname" title="please enter the name of your portfolio" aria-required="true" />
         <!-- instant validation make sure it's entered/correct name format - alert sprite if not-->
 
         <label for="portfolioaddress">Porfolio Address</label>
-        <input type="address" id="address" name="portfolioaddress" aria-required="true" />
+        <input type="portfolioaddress" id="portfolioaddress" name="portfolioaddress" aria-required="true" />
       </fieldset>
     </section>
 
@@ -37,7 +39,7 @@
       <h1><!--span class="number">2</span--> Now, enter your account details</h1>
       <fieldset>
         <label for="name">Name</label>
-        <input type="text" id="name" name="name" maxlength="50" data-validate="notBlank signUpName" aria-required="true" title="Enter your full name" data-errormsg-notblank="Please enter your full name" data-errormsg-fullname="First and Last names can only contain letters, hyphen, apostrophy and spaces." aria-describedby="some-voice" aria-invalid="true" class="errorField" />
+        <input type="text" id="name" name="name" maxlength="50" data-validate="notBlank signUpName" aria-required="true" title="Enter your full name" data-errormsg-notblank="Please enter your full name" data-errormsg-fullname="First and Last names can only contain letters, hyphen, apostrophy and spaces." class="errorField" />
 
         <label for="email">Email</label>
         <input type="email" id="email" name="email" aria-required="true" />
@@ -55,11 +57,14 @@
       <!--image "3"-->
       <h1>Finally, enter your payment information</h1>
       <fieldset>
-        <label for="cardtype">Card number:</label>
-          <input type="number" id="cardnumber" name="cardnumber" />
+        <label for="cardnumber">Card number:</label>
+        <input type="text" pattern="[0-9] {13, 16}" id="cardnumber" name="cardnumber" maxlength="20" onblur="jsfunction to get rid of anything except numbers" />
+
+        <label for="securitycode">Security code:</label>
+        <input type="text" id="securitycode" name="securitycode" maxlength="3" />
 
         <label for="expirationMonth" class="hiddentext">Expiration date month</label>
-        <select name="expirationmonth" id="expirationmonth" data-validate="months" aria-required="true" data-error-msg-months="please select the expiration month of your card" aria-describedby="expirationMonthFeedbackmsg">
+        <select name="expirationmonth" id="expirationmonth" title="select expiration month of your card" data-validate="months" aria-required="true" >
           <option value="00">Month</option>
           <option value="01">January</option>
           <option value="02">February</option>
