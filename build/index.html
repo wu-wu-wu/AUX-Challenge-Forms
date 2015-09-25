@@ -22,16 +22,17 @@
 <form id="createportfolioform" action="/my-handling-form-page" method="post">
     <section>
       <!--image "1"-->
-      <h1>First, name your portfolio</h1>
       <fieldset>
-        <legend aria-hidden="true">Your portfolio Name and Address</legend>
+        <legend aria-hidden="true">First, name your portfolio</legend>
 
         <label for="portfolionameinput">Portfolio name</label></br>
-        <input type="text" id="portfolionameinput" name="portfolioinput" data-validate="notBlank signUpName" title="please enter the name of your portfolio" aria-required="true" /><br>
+        <input type="text" id="portfolionameinput" name="portfolioinput" data-validate="notBlank signUpName" title="please enter the name of your portfolio" aria-required="true" required /><br>
         <!-- instant validation make sure it's entered/correct name format - alert sprite if not-->
 
-        <label for="portfolioaddressinput">Porfolio Address</label></br>
-        <input type="text" name="portfolioinput"  id="portfolioaddressinput" data-validate="notBlank signUpName" title="enter your portfolio address" aria-required="true" />
+        <label>Porfolio Address</br>
+        <input type="text" name="portfolioinput"  id="portfolioaddressinput" data-validate="notBlank signUpName" title="enter your portfolio address" aria-required="true" required /></label>
+        <label for="portfolioaddressinput">.sample.com</label>
+
       </fieldset>
     </section>
 
@@ -42,37 +43,35 @@
         <legend aria-hidden="true">Your name, email, and password</legend>
 
             <label for="usernameinput">Name</label></br>
-            <input type="text" name="nameinput" id="usernameinput" maxlength="50" data-validate="notBlank signUpName" aria-required="true" title="Enter your full name" usernameinput-error-blank="Please enter your full name" usernameinput-error-typo="First and Last names can only contain letters, hyphen, apostrophy and spaces." class="errorField" /></li></br>
+            <input type="text" name="nameinput" id="usernameinput" maxlength="50" data-validate="notBlank signUpName" aria-required="true" required title="Enter your full name" usernameinput-error-blank="Please enter your full name" usernameinput-error-typo="First and Last names can only contain letters, hyphen, apostrophy and spaces." class="errorField" /></li></br>
 
-            <label>
-            <span>Email</span></br>
-            <input type="email" id="email" name="email" aria-required="true" /></br>
-            <span>NOTE: We'll never share your email, promise.</span>
-            </label></br>
+            <label>Email</br>
+            <input type="email" id="emailinput" name="email" aria-required="true" required /></label></br>
+            <label for="emailinput">NOTE: We'll never share your email, promise.</label></br>
             <!-- instant validation make sure it's email format - alert sprite if not-->
 
             <label for="password">Password</label></br>
-            <input type="password" id="password" name="password" maxlength="30" title="please enter your password" aria-required="true" />
+            <input type="password" id="password" name="password" maxlength="30" title="please enter your password" aria-required="true" required />
 
       </fieldset>
     </section>
 
     <section>
       <!--image "3"-->
-      <h1>Finally, enter your payment information</h1>
       <fieldset>
-        <legend aria-hidden="true">Your card number, security code, and expiration date</legend>
+        <legend aria-hidden="true">Finally, enter your payment information</legend>
 
         <label for="cardnumber">Card number:</label></br>
-        <input type="text" pattern="[0-9] {13, 16}" id="cardnumber" name="cardnumber" maxlength="20" onblur="jsfunction to get rid of anything except numbers" title="Enter your sixteen digit card number" /></br>
+        <input type="text" pattern="[0-9] {13, 16}" id="cardnumber" name="cardnumber" maxlength="20" onblur="jsfunction to get rid of anything except numbers" title="Enter your sixteen digit card number" aria-required="true" required/>
+        <input type="radio" name="creditcards" id="creditcardradio1"><input type="radio" name="creditcards" id="creditcardradio2"><input type="radio" name="creditcards" id="creditcardradio3"><input type="radio" name="creditcards" id="creditcardradio4">
+        </br>
 
         <label>Security code</br>
-        <input type="text" id="securitycode" name="securitycode" maxlength="4" aria-describedby="securitycode-msg"/>
-        <span hidden id="securitycode-msg">Your security code are three or four numbers on your card</span></label></br>
-
-        <label for="expirationMonth">Expiration date month</label></br>
-        <select name="expirationmonth" id="expirationmonth" title="select the expiration month of your card" data-validate="months" aria-required="true" >
-          <option value="00">Month</option>
+        <input type="text" id="securitycode" name="securitycode" maxlength="4" title="Your security code are three or four numbers on your card"/></label></br>
+        <fieldset>
+          <legend>Expiration date</legend>
+        <select name="expirationmonth" id="expirationmonth" title="select the expiration month of your card" data-validate="months" aria-required="true" required >
+          <option value="00" selected disabled>Month</option>
           <option value="01">January</option>
           <option value="02">February</option>
           <option value="03">March</option>
@@ -87,8 +86,8 @@
           <option value="12">December</option>
         </select>
 
-        <select name="expirationday" data-validate="days" title="select expiration day of your card" aria-required="true" data-error-msg-months="please select the expiration month of your card">
-          <option value="00">Day</option>
+        <select name="expirationday" data-validate="days" title="select expiration day of your card" aria-required="true" required data-error-msg-months="please select the expiration month of your card" >
+          <option value="00" selected disabled>Day</option>
           <option value="01">1</option>
           <option value="02">2</option>
           <option value="03">3</option>
@@ -121,6 +120,7 @@
           <option value="30">30</option>
           <option value="31">31</option>
         </select>
+      </fieldset>
     </fieldset>
     </section>
 
