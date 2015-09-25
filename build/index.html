@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en" class="no-js">
 <head>
-  <title></title>
+  <title>Create your Whoo Portfolio</title>
 
   <link rel="dns-prefetch" href="//ajax.googleapis.com">
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -12,44 +12,48 @@
 
 </head>
 <body>
-  <header role="banner">
+  <header>
     <h1>Sign up for Whoo!</h1>
     <h2>50 Projects, 500 images, 10 videos, domain binding, and technical support</h2>
   </header>
 
 <!-- look up! aria-invalid="true" aria-describedby="some-voice" data-error-msg-months="please select the expiration month of your card" aria-describedby="expirationMonthFeedbackmsg"-->
 
-<form>
+<form id="createportfolioform" action="/my-handling-form-page" method="post">
     <section>
       <!--image "1"-->
       <h1>First, name your portfolio</h1>
       <fieldset>
-        <!--legend><span class="number">1</span> First, name your portfolio</legend-->
-        <label for="portfolioname">Portfolio name</label>
-        <input type="text" id="portfolioname" name="portfolioname" title="please enter the name of your portfolio" aria-required="true" />
+        <legend aria-hidden="true">Your portfolio Name and Address</legend>
+
+        <label for="portfolionameinput">Portfolio name</label></br>
+        <input type="text" id="portfolionameinput" name="portfolioinput" data-validate="notBlank signUpName" title="please enter the name of your portfolio" aria-required="true" /><br>
         <!-- instant validation make sure it's entered/correct name format - alert sprite if not-->
 
-        <label for="portfolioaddress">Porfolio Address</label>
-        <input type="portfolioaddress" id="portfolioaddress" name="portfolioaddress" aria-required="true" />
+        <label for="portfolioaddressinput">Porfolio Address</label></br>
+        <input type="text" name="portfolioinput"  id="portfolioaddressinput" data-validate="notBlank signUpName" title="enter your portfolio address" aria-required="true" />
       </fieldset>
     </section>
 
     <section>
       <!-- image "2"-->
-      <h1><!--span class="number">2</span--> Now, enter your account details</h1>
+      <h1>Now, enter your account details</h1>
       <fieldset>
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" maxlength="50" data-validate="notBlank signUpName" aria-required="true" title="Enter your full name" data-errormsg-notblank="Please enter your full name" data-errormsg-fullname="First and Last names can only contain letters, hyphen, apostrophy and spaces." class="errorField" />
+        <legend aria-hidden="true">Your name, email, and password</legend>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" aria-required="true" />
-        <label for="email">NOTE: We'll never share your email, promise.</label>
-        <!-- instant validation make sure it's email format - alert sprite if not-->
+            <label for="usernameinput">Name</label></br>
+            <input type="text" name="nameinput" id="usernameinput" maxlength="50" data-validate="notBlank signUpName" aria-required="true" title="Enter your full name" usernameinput-error-blank="Please enter your full name" usernameinput-error-typo="First and Last names can only contain letters, hyphen, apostrophy and spaces." class="errorField" /></li></br>
 
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" aria-required="true" />
+            <label>
+            <span>Email</span></br>
+            <input type="email" id="email" name="email" aria-required="true" /></br>
+            <span>NOTE: We'll never share your email, promise.</span>
+            </label></br>
+            <!-- instant validation make sure it's email format - alert sprite if not-->
 
-      </p>
+            <label for="password">Password</label></br>
+            <input type="password" id="password" name="password" maxlength="30" title="please enter your password" aria-required="true" />
+
       </fieldset>
     </section>
 
@@ -57,14 +61,17 @@
       <!--image "3"-->
       <h1>Finally, enter your payment information</h1>
       <fieldset>
-        <label for="cardnumber">Card number:</label>
-        <input type="text" pattern="[0-9] {13, 16}" id="cardnumber" name="cardnumber" maxlength="20" onblur="jsfunction to get rid of anything except numbers" />
+        <legend aria-hidden="true">Your card number, security code, and expiration date</legend>
 
-        <label for="securitycode">Security code:</label>
-        <input type="text" id="securitycode" name="securitycode" maxlength="3" />
+        <label for="cardnumber">Card number:</label></br>
+        <input type="text" pattern="[0-9] {13, 16}" id="cardnumber" name="cardnumber" maxlength="20" onblur="jsfunction to get rid of anything except numbers" title="Enter your sixteen digit card number" /></br>
 
-        <label for="expirationMonth" class="hiddentext">Expiration date month</label>
-        <select name="expirationmonth" id="expirationmonth" title="select expiration month of your card" data-validate="months" aria-required="true" >
+        <label>Security code</br>
+        <input type="text" id="securitycode" name="securitycode" maxlength="4" aria-describedby="securitycode-msg"/>
+        <span hidden id="securitycode-msg">Your security code are three or four numbers on your card</span></label></br>
+
+        <label for="expirationMonth">Expiration date month</label></br>
+        <select name="expirationmonth" id="expirationmonth" title="select the expiration month of your card" data-validate="months" aria-required="true" >
           <option value="00">Month</option>
           <option value="01">January</option>
           <option value="02">February</option>
@@ -80,7 +87,7 @@
           <option value="12">December</option>
         </select>
 
-        <select name="expirationday" data-validate="days" title="select expiration day of your card" aria-required="true" data-error-msg-months="please select the expiration month of your card" aria-describedby="expirationMonthFeedbackmsg">
+        <select name="expirationday" data-validate="days" title="select expiration day of your card" aria-required="true" data-error-msg-months="please select the expiration month of your card">
           <option value="00">Day</option>
           <option value="01">1</option>
           <option value="02">2</option>
@@ -118,7 +125,8 @@
     </section>
 
     <section>
-        <button id="create">Create your portfolio</button>
+      <input type="submit" name="submit" value="Create Your Portfolio" />
     </section>
 
 </form>
+</html>
