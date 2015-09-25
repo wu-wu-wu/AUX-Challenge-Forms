@@ -6,25 +6,24 @@
 
   <link rel="dns-prefetch" href="//ajax.googleapis.com">
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
-
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css"
   <meta charset="UTF-8">
   <meta http-equiv="cleartype" content="on">
 
 </head>
-<body>
+<body bgcolor="grey">
   <header>
     <h1>Sign up for Whoo!</h1>
     <h2>50 Projects, 500 images, 10 videos, domain binding, and technical support</h2>
   </header>
 
 <!-- look up! aria-invalid="true" aria-describedby="some-voice" data-error-msg-months="please select the expiration month of your card" aria-describedby="expirationMonthFeedbackmsg"-->
-
+<main>
 <form id="createportfolioform" action="/my-handling-form-page" method="post">
-    <section>
       <!--image "1"-->
-      <fieldset>
-        <legend aria-hidden="true">First, name your portfolio</legend>
-
+    <fieldset>
+      <legend class="instructions">First, name your portfolio</legend>
+      <section>
         <label for="portfolionameinput">Portfolio name</label></br>
         <input type="text" id="portfolionameinput" name="portfolioinput" data-validate="notBlank signUpName" title="please enter the name of your portfolio" aria-required="true" required /><br>
         <!-- instant validation make sure it's entered/correct name format - alert sprite if not-->
@@ -32,44 +31,43 @@
         <label>Porfolio Address</br>
         <input type="text" name="portfolioinput"  id="portfolioaddressinput" data-validate="notBlank signUpName" title="enter your portfolio address" aria-required="true" required /></label>
         <label for="portfolioaddressinput">.sample.com</label>
+      </section>
+    </fieldset>
 
-      </fieldset>
-    </section>
-
-    <section>
       <!-- image "2"-->
-      <h1>Now, enter your account details</h1>
-      <fieldset>
-        <legend aria-hidden="true">Your name, email, and password</legend>
+    <fieldset>
+      <legend class="instructions">Now, enter your account details</legend>
+      <section>
+        <label for="usernameinput">Name</label></br>
+        <input type="text" name="nameinput" id="usernameinput" maxlength="50" data-validate="notBlank signUpName" aria-required="true" required title="Enter your full name" usernameinput-error-blank="Please enter your full name" usernameinput-error-typo="First and Last names can only contain letters, hyphen, apostrophy and spaces." class="errorField" /></li></br>
 
-            <label for="usernameinput">Name</label></br>
-            <input type="text" name="nameinput" id="usernameinput" maxlength="50" data-validate="notBlank signUpName" aria-required="true" required title="Enter your full name" usernameinput-error-blank="Please enter your full name" usernameinput-error-typo="First and Last names can only contain letters, hyphen, apostrophy and spaces." class="errorField" /></li></br>
+        <label>Email</br>
+        <input type="email" id="emailinput" name="email" aria-required="true" required /></label></br>
+        <label for="emailinput">NOTE: We'll never share your email, promise.</label></br>
+        <!-- instant validation make sure it's email format - alert sprite if not-->
 
-            <label>Email</br>
-            <input type="email" id="emailinput" name="email" aria-required="true" required /></label></br>
-            <label for="emailinput">NOTE: We'll never share your email, promise.</label></br>
-            <!-- instant validation make sure it's email format - alert sprite if not-->
+        <label for="password">Password</label></br>
+        <input type="password" id="password" name="password" maxlength="30" title="please enter your password" aria-required="true" required />
+      </section>
+    </fieldset>
 
-            <label for="password">Password</label></br>
-            <input type="password" id="password" name="password" maxlength="30" title="please enter your password" aria-required="true" required />
-
-      </fieldset>
-    </section>
-
-    <section>
       <!--image "3"-->
-      <fieldset>
-        <legend aria-hidden="true">Finally, enter your payment information</legend>
-
+    <fieldset>
+      <legend class="instructions">Finally, enter your payment information</legend>
+      <section>
         <label for="cardnumber">Card number:</label></br>
         <input type="text" pattern="[0-9] {13, 16}" id="cardnumber" name="cardnumber" maxlength="20" onblur="jsfunction to get rid of anything except numbers" title="Enter your sixteen digit card number" aria-required="true" required/>
-        <input type="radio" name="creditcards" id="creditcardradio1"><input type="radio" name="creditcards" id="creditcardradio2"><input type="radio" name="creditcards" id="creditcardradio3"><input type="radio" name="creditcards" id="creditcardradio4">
+        <input type="radio" name="creditcards" id="creditcardradio1" class="radio">
+        <input type="radio" name="creditcards" id="creditcardradio2" class="radio">
+        <input type="radio" name="creditcards" id="creditcardradio3" class="radio">
+        <input type="radio" name="creditcards" id="creditcardradio4" class="radio">
         </br>
 
         <label>Security code</br>
         <input type="text" id="securitycode" name="securitycode" maxlength="4" title="Your security code are three or four numbers on your card"/></label></br>
+
         <fieldset>
-          <legend>Expiration date</legend>
+        <legend>Expiration date</legend>
         <select name="expirationmonth" id="expirationmonth" title="select the expiration month of your card" data-validate="months" aria-required="true" required >
           <option value="00" selected disabled>Month</option>
           <option value="01">January</option>
@@ -121,12 +119,11 @@
           <option value="31">31</option>
         </select>
       </fieldset>
+      </section>
     </fieldset>
-    </section>
 
-    <section>
-      <input type="submit" name="submit" value="Create Your Portfolio" />
-    </section>
+    <input type="submit" name="submit" id="submitbutton" value="Create Your Portfolio" />
 
+<main>
 </form>
 </html>

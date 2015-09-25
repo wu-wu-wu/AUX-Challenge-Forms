@@ -1,0 +1,62 @@
+header {
+  background-color: blue;
+  width: 600px;
+  height: 100px;
+  border-radius: 10px 10px 0 0;
+  padding: 10px 0px 0 30px ;
+}
+
+header h1 {
+  color: white;
+}
+
+header h2 {
+  color: white;
+  font-size: .8em;
+}
+
+main {
+  background-color: white;
+  width: 600px;
+  height: 700px;
+  border-radius: 0 0 10px 10px;
+}
+
+section {
+  background-color: grey;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
+}
+
+fieldset {
+  border: 0px;
+}
+
+#submitbutton {
+  color: white;
+  background-color: green;
+  border-radius: 5px;
+  padding: 10px 20px 10px 20px;
+  width: 200px;
+  height: 50px;
+}
+
+input {
+  width: 400px;
+  height: 25px;
+}
+
+input #submitbutton {
+  width:
+}
+
+.radio {
+  width: 20px;
+}
+
+.instructions {
+  font-size: 20px;
+  padding-top: 20px;
+  margin:  0 0 -20px 20px;
+}
