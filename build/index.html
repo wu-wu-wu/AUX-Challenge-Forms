@@ -35,7 +35,7 @@
         <!-- instant validation make sure it's entered/correct name format - alert sprite if not-->
         <!-- 1-2 portfolio address -->
         <label>Porfolio Address</br>
-        <input type="text" name="portfolioinput"  id="portfolioaddressinput" data-validate="notBlank signUpName" title="enter your portfolio address" aria-required="true" required /></label>
+        <input type="text" name="portfolioinput"  id="portfolioaddressinput" data-validate="notBlank signUpName" title="enter your portfolio address" aria-required="true" required maxlength="30" /></label>
         <label for="portfolioaddressinput" id="addressplaceholder">.sample.com</label>
       </section>
     </fieldset>
@@ -52,10 +52,9 @@
         <input type="text" name="nameinput" id="usernameinput" maxlength="50" data-validate="notBlank signUpName" aria-required="true" required title="Enter your full name" usernameinput-error-blank="Please enter your full name" usernameinput-error-typo="First and Last names can only contain letters, hyphen, apostrophy and spaces." class="errorField" /></li></br>
 
         <!-- 2-2 user email -->
-        <label>Email</br>
+        <label for="emailinput">Email</br>
         <input type="email" id="emailinput" name="email" aria-required="true" required /></label></br>
         <label for="emailinput" id="emailinputnote">NOTE: We'll never share your email, promise.</label></br>
-        <!-- instant validation make sure it's email format - alert sprite if not-->
 
         <!-- 2-3 user password -->
         <label for="password">Password</label></br>
@@ -72,7 +71,7 @@
       <section>
         <!-- 3-1 card number -->
         <label for="cardnumber">Card number:</label></br>
-        <input type="text" pattern="[0-9] {13, 16}" id="cardnumber" name="cardnumber" maxlength="20" onblur="jsfunction to get rid of anything except numbers" title="Enter your sixteen digit card number" aria-required="true" required/>
+        <input type="text" id="cardnumber" name="cardnumber" maxlength="20" title="Enter your sixteen digit card number" aria-required="true" required/>
         <input type="radio" id="creditcardradio1" name="creditcards" class="radio">
         <label for="creditcardradio1"></label>
         <input type="radio" id="creditcardradio2" name="creditcards" class="radio">
@@ -85,7 +84,7 @@
 
         <!-- 3-2 security code -->
         <label>Security code</br>
-        <input type="text" id="securitycode" name="securitycode" maxlength="4" title="Your security code are three or four numbers on your card"/></label></br>
+        <input type="text" id="securitycode" name="securitycode" maxlength="4" title="Your security code are three or four numbers on your card" aria-required="true" required/></label></br>
 
         <!-- 3-3 expiration date -->
         <fieldset>
