@@ -1,62 +1,243 @@
+/*----- container including all the content; use to align center -----*/
+.container {
+  height: 1200px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+  padding: 0px;
+}
+
+/*----- header, h1 and h2 -----*/
 header {
-  background-color: blue;
-  width: 600px;
+  background-color: #0a5e78;
+  border-radius: 8px 8px 0 0;
   height: 100px;
-  border-radius: 10px 10px 0 0;
-  padding: 10px 0px 0 30px ;
+  width: 600px;
 }
 
 header h1 {
   color: white;
+  font-family: Merriweather;
+  font-weight: normal;
+  font-size: 2em;
+  letter-spacing: .03em;
+  padding: 25px 0 0px 40px;
 }
 
 header h2 {
-  color: white;
-  font-size: .8em;
+  color: #b3e3ff;
+  font-family: Open sans;
+  font-weight: normal;
+  font-size: .7em;
+  letter-spacing: .04em;
+  margin-top: -22px;
+  padding: 0px 0 26px 40px;
 }
 
+/*----- main section including form -----*/
 main {
   background-color: white;
+  border-radius: 0 0 8px 8px;
+  height: 1083px;
   width: 600px;
-  height: 700px;
-  border-radius: 0 0 10px 10px;
 }
 
-section {
-  background-color: grey;
-  border-radius: 5px;
-  padding: 20px;
-  margin: 20px;
+form {
+
 }
 
 fieldset {
   border: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+/*----- each fieldset's colored content section -----*/
+section {
+  background-color: #f3f5f5;
+  border-radius: 5px;
+  margin: 6px auto 0 auto;
+  padding: 32px 41px 36px 41px;
+  width: 440px;
+}
+
+/*----- numbered instructions for each fieldset -----*/
+.number {
+  color: white;
+  background-color: #4ea2d6;
+  border: 6px solid white;
+  border-radius: 19px;
+  height: 22px;
+  margin: -12px 0 0 -20px;
+  padding-top: 5px;
+  text-align: center;
+  width: 28px;
+}
+
+.instructions {
+  color: #0a5e78;
+  font-family: "Merriweather";
+  font-weight: bold;
+  font-size: 1.08em;
+  margin:  0 0 -20px 40px;
+  padding-top: 36px;
+}
+
+/*----- form inputs -----*/
+label {
+    color: #888888;
+    font-family: "Open Sans";
+    font-size: 12px;
+    margin-top: 9px;
+    margin-bottom: 20px;
+}
+
+input {
+  background: url('../images/sprite.png') no-repeat -1px -167px;
+  border-radius: 5px;
+  font-family:"Open Sans";
+  font-size: 14px;
+  height: 32px;
+  width: 439px;
+  margin-top: 9px;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+/*----- form input group 1 -----*/
+#portfolionameinput {
+  background: url('../images/sprite.png') no-repeat -1px -167px;
+}
+
+#portfolioaddressinput {
+  background: url('../images/sprite.png') no-repeat -1px -167px;
+}
+
+#addressplaceholder {
+  background-color: #fafafa;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 15px;
+  float: left;
+  height: 28px;
+  margin-top: -57px;
+  margin-left: 280px;
+  padding: 8px 0px 0px 22px;
+  position: relative;
+  width: 142px;
+}
+
+/*----- form input group 2 -----*/
+
+#emailinputnote {
+  font-size: 11px;
+  margin-top: -40px;
+  margin-bottom: 0px;
+}
+
+/*----- form input group 3 -----*/
+#cardnumber {
+  width: 239px;
+}
+
+#securitycode {
+  width: 79px;
+}
+
+#expirationmonth {
+   height: 33px;
+   width: 122px;
+ }
+
+ #expirationday {
+   /* height: 33px; <--couldn't change!!*/
+   width: 65px;
+
+ }
+
+/*----- group 3 : credit card selector -----*/
+
+/* hide default radio buttons by moving it off-screen so that it remains accessible to screen readers*/
+input[type=radio] {
+    position: absolute;
+    margin-left:-900px;
+}
+
+input[type=radio] + label{
+  background-color: #e7e7e7;
+  border-color: #ddd;
+  cursor:pointer;
+  display:inline-block;
+  height: 30px;
+  margin-bottom: -8px;
+  padding: 0px 0px;
+  width: 44px;
+}
+
+/*----- creditcardradio1 -----*/
+
+/*
+label[for=creditcardradio1] {
+  background: url('../images/sprite.png') no-repeat -1px -40px;
+}
+*/
+
+input[type=radio] + label[for="creditcardradio1"] {
+  background: url('../images/sprite.png') no-repeat -1px -40px;
+}
+
+input[type=radio]:checked + label[for="creditcardradio1"] {
+  background: url('../images/sprite.png') no-repeat 0 0;
+}
+
+/*----- creditcardradio2 -----*/
+
+input[type=radio] + label[for="creditcardradio2"] {
+	background: url('../images/sprite.png') no-repeat -48px -40px;
+}
+
+input[type=radio]:checked + label[for="creditcardradio2"] {
+  background: url('../images/sprite.png') no-repeat -48px 0;
+}
+
+/*----- creditcardradio3 -----*/
+
+input[type=radio] + label[for="creditcardradio3"] {
+  background: url('../images/sprite.png') no-repeat -96px -40px;
+}
+
+input[type=radio]:checked + label[for="creditcardradio3"]{
+  background: url('../images/sprite.png') no-repeat -96px 0;
+}
+
+/*----- creditcardradio4 -----*/
+
+input[type=radio] + label[for="creditcardradio4"] {
+  background: url('../images/sprite.png') no-repeat -144px -40px;
+}
+
+input[type=radio]:checked + label[for="creditcardradio4"] {
+  background: url('../images/sprite.png')  no-repeat -144px 0;
+}
+/*----- submit div + button! -----*/
+#submit {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 218px;
 }
 
 #submitbutton {
   color: white;
-  background-color: green;
+  background: none;
+  background-color: #90a933;
   border-radius: 5px;
-  padding: 10px 20px 10px 20px;
-  width: 200px;
-  height: 50px;
-}
-
-input {
-  width: 400px;
-  height: 25px;
-}
-
-input #submitbutton {
-  width:
-}
-
-.radio {
-  width: 20px;
-}
-
-.instructions {
-  font-size: 20px;
-  padding-top: 20px;
-  margin:  0 0 -20px 20px;
+  font-family: "Merriweather";
+  font-size: 16px;
+  height: 37px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 0px;
+  width: 218px;
 }
