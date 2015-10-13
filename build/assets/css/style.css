@@ -41,7 +41,7 @@ header h2 {
 main {
   background-color: white;
   border-radius: 0 0 8px 8px;
-  height: 1140px;
+  margin-bottom: 20px;
   width: 600px;
 }
 
@@ -137,7 +137,7 @@ input {
 
 /*----- form input group 3 -----*/
 #cardnumber {
-  width: 229px;
+  width: 209px;
 }
 
 #securitycode {
@@ -182,11 +182,11 @@ label[for=creditcardradio1] {
 }
 */
 
-input[type=radio] + label[for="creditcardradio1"] {
+input[type=radio] + label[for="amex"] {
   background: url('../images/sprite.png') no-repeat -1px -40px;
 }
 
-input[type=radio]:checked + label[for="creditcardradio1"], input[type=radio]:focus + label[for="creditcardradio1"], input[type=radio]:hover + label[for="creditcardradio1"] {
+input[type=radio]:checked + label[for="amex"], input[type=radio]:focus + label[for="amex"], input[type=radio]:hover + label[for="amex"] {
   background: url('../images/sprite.png') no-repeat 0 0;
   border-color: #6f9eff;
   box-shadow: 0 0 10px #6f9eff;
@@ -194,11 +194,11 @@ input[type=radio]:checked + label[for="creditcardradio1"], input[type=radio]:foc
 
 /*----- creditcardradio2 -----*/
 
-input[type=radio] + label[for="creditcardradio2"] {
+input[type=radio] + label[for="visa"] {
 	background: url('../images/sprite.png') no-repeat -48px -40px;
 }
 
-input[type=radio]:checked + label[for="creditcardradio2"], input[type=radio]:focus + label[for="creditcardradio2"], input[type=radio]:hover + label[for="creditcardradio2"] {
+input[type=radio]:checked + label[for="visa"], input[type=radio]:focus + label[for="visa"], input[type=radio]:hover + label[for="visa"] {
   background: url('../images/sprite.png') no-repeat -48px 0;
   border-color: #6f9eff;
   box-shadow: 0 0 10px #6f9eff;
@@ -206,11 +206,11 @@ input[type=radio]:checked + label[for="creditcardradio2"], input[type=radio]:foc
 
 /*----- creditcardradio3 -----*/
 
-input[type=radio] + label[for="creditcardradio3"] {
+input[type=radio] + label[for="discover"] {
   background: url('../images/sprite.png') no-repeat -96px -40px;
 }
 
-input[type=radio]:checked + label[for="creditcardradio3"], input[type=radio]:focus + label[for="creditcardradio3"], input[type=radio]:hover + label[for="creditcardradio3"]{
+input[type=radio]:checked + label[for="discover"], input[type=radio]:focus + label[for="discover"], input[type=radio]:hover + label[for="discover"]{
   background: url('../images/sprite.png') no-repeat -96px 0;
   border-color: #6f9eff;
   box-shadow: 0 0 10px #6f9eff;
@@ -218,11 +218,11 @@ input[type=radio]:checked + label[for="creditcardradio3"], input[type=radio]:foc
 
 /*----- creditcardradio4 -----*/
 
-input[type=radio] + label[for="creditcardradio4"] {
+input[type=radio] + label[for="mastercard"] {
   background: url('../images/sprite.png') no-repeat -144px -40px;
 }
 
-input[type=radio]:checked + label[for="creditcardradio4"], input[type=radio]:focus + label[for="creditcardradio4"], input[type=radio]:hover + label[for="creditcardradio4"]{
+input[type=radio]:checked + label[for="mastercard"], input[type=radio]:focus + label[for="mastercard"], input[type=radio]:hover + label[for="mastercard"]{
   background: url('../images/sprite.png')  no-repeat -144px 0;
   border-color: #6f9eff;
   box-shadow: 0 0 10px #6f9eff;
@@ -271,4 +271,13 @@ input:focus:required:invalid {
 input:focus:required:valid {
 	background: url('../images/sprite.png') no-repeat right -187px;
   background-color: white;
+}
+
+/*----- parsley form validator -----*/
+li {
+  font-size: 12px;
+  color: #0a5e78;
+  margin: -10px;
+  font-family: "open sans";
+  list-style: none;
 }
