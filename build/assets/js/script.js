@@ -5,9 +5,9 @@
 $(document).ready(function () {
   //jquery goes here
 });
-/*
+*/
 
-/*
+
 // parsley form input validator
 $(document).ready(function() {
     $('#createportfolioform').parsley();
@@ -21,7 +21,7 @@ $(document).ready(function() {
         }
     });
 });
-*/
+
 
 // jquery credit card validator
 /*
