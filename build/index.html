@@ -31,11 +31,11 @@
 
       <section>
         <!-- 1-1 portfolio name -->
-        <label for="portfolionameinput">Portfolio name</label></br>
+        <label for="portfolionameinput">Portfolio name</label>
         <input type="text" id="portfolionameinput" name="portfolioinput" data-validate="notBlank signUpName" title="please enter the name of your portfolio" aria-required="true" required ><br>
         <!-- instant validation make sure it's entered/correct name format - alert sprite if not-->
         <!-- 1-2 portfolio address -->
-        <label>Porfolio Address</br>
+        <label>Porfolio Address</label>
         <input type="text"  id="portfolioaddressinput" name="portfolioinput" data-validate="notBlank signUpName" title="enter your portfolio address" aria-required="true" required maxlength="30" /></label>
         <label for="portfolioaddressinput" id="addressplaceholder">.sample.com</label>
       </section>
@@ -49,16 +49,16 @@
 
       <section>
         <!-- 2-1 user name -->
-        <label for="usernameinput">Name</label></br>
-        <input type="text" name="nameinput" id="usernameinput" maxlength="50" data-validate="notBlank signUpName" aria-required="true" required title="Enter your full name" usernameinput-error-blank="Please enter your full name" usernameinput-error-typo="First and Last names can only contain letters, hyphen, apostrophy and spaces." class="errorField" /></li></br>
+        <label for="usernameinput">Name</label>
+        <input type="text" name="nameinput" id="usernameinput" maxlength="50" data-validate="notBlank signUpName" aria-required="true" required title="Enter your full name" usernameinput-error-blank="Please enter your full name" usernameinput-error-typo="First and Last names can only contain letters, hyphen, apostrophy and spaces." class="errorField" /></li>
 
         <!-- 2-2 user email -->
-        <label for="emailinput">Email</br>
-        <input type="email" id="emailinput" name="email" aria-required="true" required /></label></br>
-        <label for="emailinput" id="emailinputnote">NOTE: We'll never share your email, promise.</label></br>
+        <label for="emailinput">Email</label>
+        <input type="email" id="emailinput" name="email" aria-required="true" required />
+        <label for="emailinput" id="emailinputnote">NOTE: We'll never share your email, promise.</label>
 
         <!-- 2-3 user password -->
-        <label for="password">Password</label></br>
+        <label for="password">Password</label>
         <input type="password" id="password" name="password" maxlength="30" title="please enter your password" aria-required="true" required />
       </section>
     </fieldset>
@@ -71,7 +71,7 @@
 
       <section>
         <!-- 3-1 card number -->
-        <label for="cardnumber">Card number:</label></br>
+        <label for="cardnumber">Card number:</label>
         <input type="text" id="cardnumber" name="cardnumber" maxlength="20" title="Enter your sixteen digit card number" aria-required="true" required/>
         <input type="radio" id="amex" name="creditcards" class="radio">
         <label for="amex"></label>
@@ -81,17 +81,16 @@
         <label for="discover"></label>
         <input type="radio" id="mastercard" name="creditcards" class="radio">
         <label for="mastercard"></label>
-        </br>
 
         <!-- 3-2 security code -->
-        <label for="securitycode">Security code</br>
+        <label for="securitycode">Security code
         <input type="text" id="securitycode" name="securitycode" maxlength="4" title="Your security code are three or four numbers on your card" aria-required="true" required/>
 
         <!-- 3-3 expiration date -->
         <fieldset>
         <legend>Expiration date</legend>
         <!-- 3-3-1 expiration month -->
-        <label for="expirationmonth">Expiration Month</br>
+        <label for="expirationmonth">Expiration Month</label>
         <select name="expirationmonth" id="expirationmonth" title="select the expiration month of your card" data-validate="months" aria-required="true" required >
           <option value="00" selected disabled>Month</option>
           <option value="01">January</option>
@@ -109,7 +108,7 @@
         </select>
 
         <!-- 3-3-2 expiration day -->
-        <label for="expirationday">Expiration Day</br>
+        <label for="expirationday">Expiration Day</label>
         <select name="expirationday" id="expirationday" data-validate="days" title="select expiration day of your card" aria-required="true" required data-error-msg-months="please select the expiration month of your card" >
           <option value="00" selected disabled>Day</option>
           <option value="01">1</option>

@@ -44,6 +44,5 @@ $('#cardnumber').validateCreditCard(function() {
 */
 
 $('#cardnumber').validateCreditCard(function(result) {
-  alert(result.card_type.name);
-  $('#'+ result.card_type.name).prop("checked", true);
+    $('#'+ result.card_type.name).prop("checked", true);
 });
