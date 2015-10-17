@@ -1,11 +1,11 @@
 /* Your JavaScript goes here */
 
-//jquery listener
-/*
-$(document).ready(function () {
-  //jquery goes here
-});
-*/
+// Modernizr
+if(Modernizr.feature) {
+  // yes - use HTML5 validation
+} else {
+  // replace with JQuery validation
+}
 
 
 // parsley form input validator
@@ -24,6 +24,12 @@ $(document).ready(function() {
 
 
 // jquery credit card validator
+$('#cardnumber').validateCreditCard(function(result) {
+    $('#'+ result.card_type.name).prop("checked", true);
+});
+
+
+// jquery credit card validator with more conditions lol i failed
 /*
 $('#cardnumber').validateCreditCard(function() {
 
@@ -43,6 +49,9 @@ $('#cardnumber').validateCreditCard(function() {
 });
 */
 
-$('#cardnumber').validateCreditCard(function(result) {
-    $('#'+ result.card_type.name).prop("checked", true);
+//jquery listener
+/*
+$(document).ready(function () {
+  //jquery goes here
 });
+*/

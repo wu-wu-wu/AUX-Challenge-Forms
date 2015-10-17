@@ -91,6 +91,7 @@ label {
   font-family: "Open Sans";
   font-size: 12px;
   margin-top: 9px;
+  display: inline-block;
   margin-bottom: 20px;
 }
 
@@ -163,7 +164,6 @@ input[type=radio] + label{
   background-color: #e7e7e7;
   border-color: #ddd;
   cursor:pointer;
-  display:inline-block;
   height: 30px;
   margin-bottom: -8px;
   padding: 0px;
@@ -274,19 +274,11 @@ ul.parsley-errors-list {
   display:none;
 }
 
-input.parsley-success,
-select.parsley-success,
-textarea.parsley-success {
-  background-color: #DFF0D8;
-  border: 1px solid #D6E9C6;
-}
-
 input.parsley-error,
 select.parsley-error,
 textarea.parsley-error,
 input:required:invalid.parsley-error {
   background-color: #F2DEDE;
-  border: 1px solid #EED3D7;
 }
 
 .parsley-errors-list {
