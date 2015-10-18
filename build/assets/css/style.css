@@ -18,17 +18,17 @@ body {
 header {
   background-color: #0a5e78;
   border-radius: 8px 8px 0 0;
-  height: 100px;
+  height: 105px;
   width: 600px;
 }
 
 header h1 {
   color: white;
   font-family: "Merriweather", Georgia, serif;
-  font-weight: normal;
-  font-size: 2em;
+  font-weight: 400;
+  font-size: 35px;
   letter-spacing: .03em;
-  padding: 25px 0 0px 40px;
+  padding: 24px 0 0px 40px;
 }
 
 header h2 {
@@ -36,8 +36,8 @@ header h2 {
   font-weight: normal;
   font-size: .7em;
   letter-spacing: .04em;
-  margin-top: -22px;
-  padding: 0px 0 26px 40px;
+  margin-top: -25px;
+  padding: 0px 0 0px 40px;
 }
 
 /*----- main section including form -----*/
@@ -58,22 +58,24 @@ fieldset {
 section {
   background-color: #f3f5f5;
   border-radius: 5px;
-  margin: 6px auto 0 auto;
-  padding: 32px 41px 36px 41px;
+  margin: 1px auto 0 auto;
+  padding: 26px 41px 36px 41px;
   width: 440px;
 }
 
 /*----- numbered instructions for each fieldset -----*/
 .number {
   color: white;
+  font-family: "Merriweather", Georgia, serif;
   background-color: #4ea2d6;
   border: 6px solid white;
   border-radius: 19px;
-  height: 22px;
-  margin: -12px 0 0 -20px;
-  padding-top: 5px;
+  height: 24px;
+  margin: -10px 0 0 -20px;
+  padding-top: 3px;
   text-align: center;
   width: 28px;
+  font-size: 17px;
 }
 
 .instructions {
@@ -81,8 +83,9 @@ section {
   font-family: "Merriweather", Georgia, serif;
   font-weight: bold;
   font-size: 1.08em;
-  margin:  0 0 -20px 40px;
-  padding-top: 36px;
+  margin: 0 0 -20px 40px;
+  padding-top: 30px;
+  letter-spacing: .1px;
 }
 
 /*----- form inputs -----*/
@@ -90,23 +93,28 @@ label {
   color: #888888;
   font-family: "Open Sans";
   font-size: 12px;
-  margin-top: 9px;
+  margin-top: 0px;
   display: inline-block;
-  margin-bottom: 20px;
+  margin-bottom: 6px;
 }
 
 input {
   border-radius: 5px;
   font-size: 14px;
-  height: 32px;
-  margin-top: 9px;
-  margin-bottom: 20px;
+  height: 31px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   padding: 0 0 0 10px;
   width: 429px;
+  display: block;
 }
 
-input#emailinput {
-  margin-bottom: 0;
+input#portfolionameinput {
+  margin-bottom: 13px;
+}
+
+input#usernameinput {
+  margin-bottom: 13px;
 }
 
 /*----- form input group 1 -----*/
@@ -132,10 +140,11 @@ input#emailinput {
 
 /*----- form INPUT group 2 -----*/
 
-label[for="emailinput"] {
+#emailinputnote {
   display: block;
   font-size: 11px;
-  margin-bottom: 20px;
+  margin-bottom: 17px;
+  margin-top: 5px;
 }
 
 /*----- form input group 3 -----*/

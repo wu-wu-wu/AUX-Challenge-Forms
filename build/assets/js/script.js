@@ -1,57 +1,44 @@
-/* Your JavaScript goes here */
-
 // Modernizr
-if(Modernizr.feature) {
+if(Modernizr.input.required) {
   // yes - use HTML5 validation
+  console.log("HTML5 input required detected");
 } else {
+  console.log("fallback JQuery input required validation activated")
   // replace with JQuery validation
+  // parsley form input validator
+  $(document).ready(function() {
+      $('#createportfolioform').parsley();
+
+      $("#submitbutton").on('click', function() {
+          $('#createportfolioform').parsley().validate("second");
+          if ($('#createportfolioform').parsley().isValid()) {
+              console.log('valid');
+          } else {
+              console.log('not valid');
+          }
+      });
+  });
 }
 
-
-// parsley form input validator
-$(document).ready(function() {
-    $('#createportfolioform').parsley();
-
-    $("#submitbutton").on('click', function() {
-        $('#createportfolioform').parsley().validate("second");
-        if ($('#createportfolioform').parsley().isValid()) {
-            console.log('valid');
-        } else {
-            console.log('not valid');
-        }
-    });
-});
-
-
 // jquery credit card validator
+var result = $('#cardnumber').validateCreditCard({ accept: ['visa', 'mastercard', 'amex', 'discover'] });
+
 $('#cardnumber').validateCreditCard(function(result) {
+  if (result.length_valid == true && result.luhn_valid == true){
     $('#'+ result.card_type.name).prop("checked", true);
+  } else {
+    $('#'+ result.card_type.name).prop("checked", false);
+    console.log("not enough numbers and invalid sequence");
+  }
 });
 
 
-// jquery credit card validator with more conditions lol i failed
-/*
-$('#cardnumber').validateCreditCard(function() {
+/* credit card validator previous working version 10/17/15
+$('#cardnumber').validateCreditCard(function(result) {
 
-    // this will execute everytime the value of the `#cardnumber` field changes
-    if (result.length_valid && result.luhn_valid) {
-        if (result.card_type.name == 'visa') {
-          alert(result.card_type.name);
-          $('label[for='+ result.card_type.name +'] input').prop("checked", true);
-        } else if (result.card_type.name == 'mastercard') {
-          $("#creditcardradio4").prop("checked", true);
-        }
-        // repeat for rest of card types
-    } else {
-        // just print an error
-        console.log('ew');
-    }
-});
-*/
+    $('#'+ result.card_type.name).prop("checked", true);
 
-//jquery listener
-/*
-$(document).ready(function () {
-  //jquery goes here
+  }
 });
+
 */
