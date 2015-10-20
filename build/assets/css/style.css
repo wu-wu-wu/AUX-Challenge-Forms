@@ -44,7 +44,7 @@ header h2 {
 main {
   background-color: white;
   border-radius: 0 0 8px 8px;
-  margin-bottom: 20px;
+  padding: 30px 0px 40px 0px;
   width: 600px;
 }
 
@@ -58,9 +58,10 @@ fieldset {
 section {
   background-color: #f3f5f5;
   border-radius: 5px;
-  margin: 1px auto 0 auto;
-  padding: 26px 41px 36px 41px;
+  margin: 1px auto 40px auto;
+  padding: 26px 41px 40px 41px;
   width: 440px;
+  position: relative;
 }
 
 /*----- numbered instructions for each fieldset -----*/
@@ -84,7 +85,6 @@ section {
   font-weight: bold;
   font-size: 1.08em;
   margin: 0 0 -20px 40px;
-  padding-top: 30px;
   letter-spacing: .1px;
 }
 
@@ -94,27 +94,28 @@ label {
   font-family: "Open Sans";
   font-size: 12px;
   margin-top: 0px;
-  display: inline-block;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 input {
   border-radius: 5px;
+  box-shadow: inset 0px 1px 1px 0 #BBBBBB;
+  display: block;
   font-size: 14px;
-  height: 31px;
-  margin-top: 0px;
+  height: 33px;
+  margin-top: 5px;
   margin-bottom: 0px;
   padding: 0 0 0 10px;
   width: 429px;
-  display: block;
+  border: 0px inset;
 }
 
 input#portfolionameinput {
-  margin-bottom: 13px;
+  margin-bottom: -6px;
 }
 
 input#usernameinput {
-  margin-bottom: 13px;
+  margin-bottom: 16px;
 }
 
 /*----- form input group 1 -----*/
@@ -129,12 +130,13 @@ input#usernameinput {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   font-size: 15px;
-  float: left;
   height: 26px;
   margin-top: -54px;
   margin-left: 280px;
   padding: 6px 1px 0px 28px;
-  position: relative;
+  position: absolute;
+  top: 184px;
+  right: 43px;
   width: 132px;
 }
 
@@ -143,17 +145,20 @@ input#usernameinput {
 #emailinputnote {
   display: block;
   font-size: 11px;
-  margin-bottom: 17px;
-  margin-top: 5px;
+  margin-bottom: 18px;
+  margin-top: 6px;
 }
 
 /*----- form input group 3 -----*/
 #cardnumber {
   width: 209px;
+  margin-bottom: 16px;
+  position: relative;
 }
 
 #securitycode {
   width: 69px;
+  margin-bottom: 20px;
 }
 
 label[for=expirationmonth], label[for=expirationday] {
@@ -173,19 +178,27 @@ input[type=radio] + label{
   background-color: #e7e7e7;
   border-color: #ddd;
   cursor:pointer;
+  float: right;
   height: 30px;
   margin-bottom: -8px;
   padding: 0px;
   width: 44px;
+  position: relative;
+  display: inline-block;
 }
 
-/*----- creditcardradio1 -----*/
+/*----- amex -----*/
 
 /*
 label[for=creditcardradio1] {
   background: url('../images/sprite.png') no-repeat -1px -40px;
 }
 */
+#creditcardradio {
+  position: absolute;
+  top: 55px;
+  right: 75px;
+}
 
 input[type=radio] + label[for="amex"] {
   background: url('../images/sprite.png') no-repeat -1px -40px;
@@ -197,7 +210,7 @@ input[type=radio]:checked + label[for="amex"], input[type=radio]:focus + label[f
   box-shadow: 0 0 10px #6f9eff;
 }
 
-/*----- creditcardradio2 -----*/
+/*----- visa -----*/
 
 input[type=radio] + label[for="visa"] {
 	background: url('../images/sprite.png') no-repeat -48px -40px;
@@ -209,7 +222,7 @@ input[type=radio]:checked + label[for="visa"], input[type=radio]:focus + label[f
   box-shadow: 0 0 10px #6f9eff;
 }
 
-/*----- creditcardradio3 -----*/
+/*----- discover -----*/
 
 input[type=radio] + label[for="discover"] {
   background: url('../images/sprite.png') no-repeat -96px -40px;
@@ -221,7 +234,7 @@ input[type=radio]:checked + label[for="discover"], input[type=radio]:focus + lab
   box-shadow: 0 0 10px #6f9eff;
 }
 
-/*----- creditcardradio4 -----*/
+/*----- mastercard -----*/
 
 input[type=radio] + label[for="mastercard"] {
   background: url('../images/sprite.png') no-repeat -144px -40px;
@@ -233,9 +246,15 @@ input[type=radio]:checked + label[for="mastercard"], input[type=radio]:focus + l
   box-shadow: 0 0 10px #6f9eff;
 }
 
+/*----- select expiration date -----*/
+
+select {
+margin-top: 4px;
+}
+
 /*----- submit div + button! -----*/
 #submit {
-  margin-top: 13px;
+  margin-top: -17px;
   margin-left: auto;
   margin-right: auto;
   max-width: 218px;

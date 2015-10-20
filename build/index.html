@@ -37,7 +37,7 @@
         <!-- instant validation make sure it's entered/correct name format - alert sprite if not-->
         <!-- 1-2 portfolio address -->
         <label>Porfolio Address</label>
-        <input type="text"  id="portfolioaddressinput" name="portfolioinput" data-validate="notBlank signUpName" title="enter your portfolio address" aria-required="true" required maxlength="30" /></label>
+        <input type="text"  id="portfolioaddressinput" name="portfolioinput" data-validate="notBlank signUpName" title="enter your portfolio address" aria-required="true" required maxlength="40" /></label>
         <label for="portfolioaddressinput" id="addressplaceholder">.sample.com</label>
       </section>
     </fieldset>
@@ -74,14 +74,16 @@
         <!-- 3-1 card number -->
         <label for="cardnumber">Card number:</label>
         <input type="text" id="cardnumber" name="cardnumber" maxlength="20" title="Enter your sixteen digit card number" aria-required="true" required/>
-        <input type="radio" id="amex" name="creditcards" class="radio">
-        <label for="amex"></label>
-        <input type="radio" id="visa" name="creditcards" class="radio">
-        <label for="visa"></label>
-        <input type="radio" id="discover" name="creditcards" class="radio">
-        <label for="discover"></label>
-        <input type="radio" id="mastercard" name="creditcards" class="radio">
-        <label for="mastercard"></label>
+        <div id="creditcardradio">
+          <input type="radio" id="amex" name="creditcards" class="radio">
+          <label for="amex"></label>
+          <input type="radio" id="visa" name="creditcards" class="radio">
+          <label for="visa"></label>
+          <input type="radio" id="discover" name="creditcards" class="radio">
+          <label for="discover"></label>
+          <input type="radio" id="mastercard" name="creditcards" class="radio">
+          <label for="mastercard"></label>
+        </div>
 
         <!-- 3-2 security code -->
         <label for="securitycode">Security code
