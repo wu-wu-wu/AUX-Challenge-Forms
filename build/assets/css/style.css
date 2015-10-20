@@ -177,7 +177,7 @@ input[type=radio] {
 input[type=radio] + label{
   background-color: #e7e7e7;
   border-color: #ddd;
-  cursor:pointer;
+  cursor:default;
   float: right;
   height: 30px;
   margin-bottom: -8px;
@@ -204,7 +204,7 @@ input[type=radio] + label[for="amex"] {
   background: url('../images/sprite.png') no-repeat -1px -40px;
 }
 
-input[type=radio]:checked + label[for="amex"], input[type=radio]:focus + label[for="amex"], input[type=radio]:hover + label[for="amex"] {
+input[type=radio]:checked + label[for="amex"]{
   background: url('../images/sprite.png') no-repeat 0 0;
   border-color: #6f9eff;
   box-shadow: 0 0 10px #6f9eff;
@@ -216,7 +216,7 @@ input[type=radio] + label[for="visa"] {
 	background: url('../images/sprite.png') no-repeat -48px -40px;
 }
 
-input[type=radio]:checked + label[for="visa"], input[type=radio]:focus + label[for="visa"], input[type=radio]:hover + label[for="visa"] {
+input[type=radio]:checked + label[for="visa"]{
   background: url('../images/sprite.png') no-repeat -48px 0;
   border-color: #6f9eff;
   box-shadow: 0 0 10px #6f9eff;
@@ -228,7 +228,7 @@ input[type=radio] + label[for="discover"] {
   background: url('../images/sprite.png') no-repeat -96px -40px;
 }
 
-input[type=radio]:checked + label[for="discover"], input[type=radio]:focus + label[for="discover"], input[type=radio]:hover + label[for="discover"]{
+input[type=radio]:checked + label[for="discover"] {
   background: url('../images/sprite.png') no-repeat -96px 0;
   border-color: #6f9eff;
   box-shadow: 0 0 10px #6f9eff;
@@ -240,7 +240,7 @@ input[type=radio] + label[for="mastercard"] {
   background: url('../images/sprite.png') no-repeat -144px -40px;
 }
 
-input[type=radio]:checked + label[for="mastercard"], input[type=radio]:focus + label[for="mastercard"], input[type=radio]:hover + label[for="mastercard"]{
+input[type=radio]:checked + label[for="mastercard"] {
   background: url('../images/sprite.png')  no-repeat -144px 0;
   border-color: #6f9eff;
   box-shadow: 0 0 10px #6f9eff;
