@@ -25,11 +25,13 @@ var result = $('#cardnumber').validateCreditCard({ accept: ['visa', 'mastercard'
 
 $('#cardnumber').validateCreditCard(function(result) {
   if (result.length_valid == true && result.luhn_valid == true){
-    $('#'+ result.card_type.name).prop("checked", true);
+    $('#' + result.card_type.name).prop("checked", true);
   } else {
-    $('#'+ result.card_type.name).prop("checked", false);
+    $('input[name="creditcards"]').prop("checked", false);
     console.log("not enough numbers and invalid sequence");
   }
+
+  amexsecuritycodecheck();
 });
 
 
@@ -39,6 +41,15 @@ $('#cardnumber').validateCreditCard(function(result) {
     $('#'+ result.card_type.name).prop("checked", true);
 
   }
-});
+});*/
 
-*/
+
+function amexsecuritycodecheck () {
+  if ( $('#amex').is(':checked') ) {
+    // if amex, change to amex sprite
+    $('#securitycodesprite').css('background-position', '0 -81px');
+  } else {
+    // if not amex, change back to default sprite
+    $('#securitycodesprite').css('background-position', '0 -124px');
+  }
+};

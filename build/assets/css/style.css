@@ -246,6 +246,18 @@ input[type=radio]:checked + label[for="mastercard"], input[type=radio]:focus + l
   box-shadow: 0 0 10px #6f9eff;
 }
 
+/*----- security code -----*/
+
+#securitycodesprite {
+  background-image: url('../images/sprite.png');
+  background-position: 0 -124px;
+  position: absolute;
+  top: 130px;
+  left: 130px;
+  width: 70px;
+  height: 33px;
+}
+
 /*----- select expiration date -----*/
 
 select {

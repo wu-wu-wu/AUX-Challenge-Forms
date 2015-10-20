@@ -75,19 +75,20 @@
         <label for="cardnumber">Card number:</label>
         <input type="text" id="cardnumber" name="cardnumber" maxlength="20" title="Enter your sixteen digit card number" aria-required="true" required/>
         <div id="creditcardradio">
-          <input type="radio" id="amex" name="creditcards" class="radio">
-          <label for="amex"></label>
-          <input type="radio" id="visa" name="creditcards" class="radio">
-          <label for="visa"></label>
-          <input type="radio" id="discover" name="creditcards" class="radio">
-          <label for="discover"></label>
-          <input type="radio" id="mastercard" name="creditcards" class="radio">
+          <input type="radio" id="mastercard" name="creditcards" class="radio" disabled='disabled'>
           <label for="mastercard"></label>
+          <input type="radio" id="discover" name="creditcards" class="radio" disabled='disabled'>
+          <label for="discover"></label>
+          <input type="radio" id="visa" name="creditcards" class="radio" disabled='disabled'>
+          <label for="visa"></label>
+          <input type="radio" id="amex" name="creditcards" class="radio" disabled='disabled'>
+          <label for="amex"></label>
         </div>
 
         <!-- 3-2 security code -->
         <label for="securitycode">Security code
         <input type="text" id="securitycode" name="securitycode" maxlength="4" title="Your security code are three or four numbers on your card" aria-required="true" required/>
+        <div id="securitycodesprite"></div>
 
         <!-- 3-3 expiration date -->
         <fieldset>
